@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/konjungate_bg.qm</file>
+        <file alias="de">locale/konjungate_de.qm</file>
+        <file alias="en">locale/konjungate_en.qm</file>
+        <file alias="es">locale/konjungate_es.qm</file>
+        <file alias="fi">locale/konjungate_fi.qm</file>
+        <file alias="fr">locale/konjungate_fr.qm</file>
+        <file alias="it">locale/konjungate_it.qm</file>
+        <file alias="ja">locale/konjungate_ja.qm</file>
+        <file alias="pl">locale/konjungate_pl.qm</file>
+        <file alias="pt">locale/konjungate_pt.qm</file>
+        <file alias="ru">locale/konjungate_ru.qm</file>
+        <file alias="sk">locale/konjungate_sk.qm</file>
+        <file alias="sv">locale/konjungate_sv.qm</file>
+        <file alias="vi">locale/konjungate_vi.qm</file>
+        <file alias="zh_CN">locale/konjungate_zh_CN.qm</file>
+        <file alias="zh_TW">locale/konjungate_zh_TW.qm</file>
+    </qresource>
+</RCC>

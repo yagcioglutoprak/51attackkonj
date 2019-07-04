@@ -1,0 +1,6 @@
+usr/local/bin/konjungate-qt usr/bin
+share/pixmaps/konjungate32.xpm usr/share/pixmaps
+share/pixmaps/konjungate16.xpm usr/share/pixmaps
+share/pixmaps/konjungate128.png usr/share/pixmaps
+debian/konjungate-qt.desktop usr/share/applications
+debian/konjungate-qt.protocol usr/share/kde4/services/

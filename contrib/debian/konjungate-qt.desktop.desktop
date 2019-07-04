@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Konjungate
+Comment=Konjungate P2P Cryptocurrency
+Exec=konjungate-qt %u
+Terminal=false
+Type=Application
+Icon=konjungate128
+MimeType=x-scheme-handler/konjungate;
+Categories=Office;Finance;
+Name[en_US]=konjungate-qt.desktop

@@ -1,0 +1,2 @@
+qt/libbitcoinqt_a-qrc_konjungate_locale.o: \
+  qt/qrc_konjungate_locale.cpp
