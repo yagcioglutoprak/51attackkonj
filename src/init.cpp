@@ -95,7 +95,6 @@ static const bool DEFAULT_PROXYRANDOMIZE = true;
 static const bool DEFAULT_REST_ENABLE = false;
 static const bool DEFAULT_DISABLE_SAFEMODE = false;
 static const bool DEFAULT_STOPAFTERBLOCKIMPORT = false;
-doNotBroadcastBlocks = GetBoolArg("-dontbroadcastblocks", false);
 
 #if ENABLE_ZMQ
 static CZMQNotificationInterface* pzmqNotificationInterface = NULL;
@@ -1759,14 +1758,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // if pruning, unset the service bit and perform the initial blockstore prune
     // after any wallet rescanning has taken place.
-    if (fPruneMode) {
-        LogPrintf("Unsetting NODE_NETWORK on prune mode\n");
-        nLocalServices &= ~NODE_NETWORK;
-        if (!fReindex) {
-            uiInterface.InitMessage(_("Pruning blockstore..."));
-            PruneAndFlush();
-        }
-    }
+   doNotBroadcastBlocks = GetBoolArg("-dontbroadcastblocks", false);
 
     // ********************************************************* Step 10: import blocks
 
@@ -1939,6 +1931,8 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     if (GetBoolArg("-listenonion", DEFAULT_LISTEN_ONION))
         StartTorControl(threadGroup, scheduler);
+    if (doNotBroadcastBlocks)
+	LogPrintf("\n---------Blocks won't be broadcasted.------------\n\n");
 
     StartNode(threadGroup, scheduler);
 
